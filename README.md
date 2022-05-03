@@ -22,6 +22,7 @@ Sections
    - [Package Fixing & SRUs](PackageFixing.md)
    - [Package Merging](PackageMerging.md)
    - [Main Inclusion](MainInclusion.md)
+   - [Salsa Package Maintenance](SalsaDualMaintenance.md)
  * Debugging
    - [Apport Crash Files](DebugApportCrash.md)
  * Reviewing
