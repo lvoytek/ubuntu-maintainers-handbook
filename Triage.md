@@ -103,3 +103,5 @@ structure to what we always look at in this meeting:
    to identify if we have fallen behind on any of them.
 1. Look at [reviews needed](https://code.launchpad.net/~canonical-server-reporter/+activereviews)
    to ensure nothing is blocked or get stalled.
+1. Look at Documentation [issues](https://github.com/canonical/ubuntu-server-documentation/issues) and [pull requests](https://github.com/canonical/ubuntu-server-documentation/pulls)
+   to ensure the actionable cases will be resolved
