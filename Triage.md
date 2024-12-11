@@ -3,12 +3,15 @@
 ## Triage rotation
 
 According to load we might shift things, but generally every day Tuesday to
-Friday one team member is assigned to triage duty.
+Friday one team member is assigned to triage duty - which means they cover
+anything that happened the day before.
 
-Monday is often more work and includes more low quality bugs since it includes
-all of the weekend. Therefore, Monday is rotated through all eligible bug
-triagers. This is organised internally in the team's Jira, and automatically
-creates a Task with the "bug-triage" label assigned to the person on rotation.
+Monday is often more work since it includes all of the weekend. Therefore,
+Monday is rotated on a longer pattern through triagers. Due to that a Monday
+every six weeks is roughly about as much effort as a weekday every other week.
+
+This is organised internally in the team's Jira, and automatically creates a
+Story with the "bug-triage" label assigned to the person on rotation.
 
 This rotation covers all three aspects:
 
@@ -16,7 +19,19 @@ This rotation covers all three aspects:
 - [Documentation Triage](DocTriage.md)
 - [Forum Triage](ForumTriage.md)
 
-## Awareness of the triage
+### Can a triage be skipped?
+
+No, the concept is that the triager looks at the cases touched on the day
+before. The one following triager will not see what happened two days before.
+
+The tools all allow to catch up, but since people might wonder why there is
+no reaction we should never wait too long. If one can't make it for any reason
+we should look for timely coverage by someone else.
+
+An exception is the global end of year shutdown of Canoncal, after that we will
+as a team look at all that happened once we are back.
+
+### Awareness of the triage
 
 We have several stakeholders to keep up-to-date on things we've found during
 triage. We also want to keep the community generally informed, as well as
