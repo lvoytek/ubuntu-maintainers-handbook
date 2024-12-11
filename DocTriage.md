@@ -11,7 +11,7 @@ on what we get there
 For the daily triage rotation you only have to look at those issues or pull
 requests created or updated in the time your duty covers.
 
-- [Pull requests](https://github.com/canonical/ubuntu-server-documentation/pulls)
-- [Issues](https://github.com/canonical/ubuntu-server-documentation/issues)
+- [Pull requests](https://github.com/canonical/ubuntu-server-documentation/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)
+- [Issues](https://github.com/canonical/ubuntu-server-documentation/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 
 Check what the interaction is about and help them to progress and land or resolve.
