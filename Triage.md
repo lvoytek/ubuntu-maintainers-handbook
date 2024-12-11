@@ -105,3 +105,8 @@ structure to what we always look at in this meeting:
    to ensure nothing is blocked or get stalled.
 1. Look at Documentation [issues](https://github.com/canonical/ubuntu-server-documentation/issues) and [pull requests](https://github.com/canonical/ubuntu-server-documentation/pulls)
    to ensure the actionable cases will be resolved
+
+We try to find a balance, ensuring that nothing falls behind too much, while at
+the same time not spending all our time in these cases. If the backlogs grow
+out of control despite these regular efforts, then roadmap time needs to be
+allocated to ensure we make good use of our community contibutions.
