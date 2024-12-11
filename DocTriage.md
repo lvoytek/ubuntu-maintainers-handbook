@@ -1,9 +1,9 @@
 # Documentation triage
 
 Documentation is hosted in [github](https://github.com/canonical/ubuntu-server-documentation)
-and from there rendered to PDF and the online view at [ubuntu server docs](https://ubuntu.com/server/docs).
+and from there rendered to PDF and the online view at [Ubuntu Server docs](https://documentation.ubuntu.com/server).
 This kind of structure gave us better interaction rates and contributions than
-on discourse, but to make them worthwhile we need to ensure we pick up and act
+on Discourse, but to make them worthwhile we need to ensure we pick up and act
 on what we get there
 
 ## Lists

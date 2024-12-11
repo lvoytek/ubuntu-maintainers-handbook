@@ -5,7 +5,7 @@ triage has been added as a task to do during [regular triage](Triage.md).
 
 Historically we used to also have our documentation on discourse, but the
 engagement of experts using server is much better in the [github based](https://github.com/canonical/ubuntu-server-documentation)
-backing [ubuntu server docs](https://ubuntu.com/server/docs).
+backing [Ubuntu Server docs](https://documentation.ubuntu.com/server).
 Due to that the forum interactions reduced and now are mostly discussions, which are a perfect fit for a forum.
 
 ## Tooling
