@@ -118,4 +118,4 @@ If you do so, ensure that we have an artifact that allows us to remember, like
 a bug, a github issue in documentation or a jira backlog entry.
 
 If any of the above is worthwhile to be aware for a wider audicence, consider
-mentioning it in your triage report.
+mentioning it in your [triage report](BugTriage.md#awareness-of-the-triage).
