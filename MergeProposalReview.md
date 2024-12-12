@@ -94,13 +94,18 @@ N = not applicable to this case
 * Package Merge - old delta:
   - [ ] Dropped changes are ok to be dropped
   - [ ] Nothing else to drop
-  - [ ] Changes forwarded upstream/Debian (if appropriate)
+  - [ ] Old delta was forwarded to upstream/Debian or marked as Ubuntu-only
 
-* New delta:
+* New delta in debian/*:
+  - [ ] new changes in debian/* are OK
+  - [ ] New delta was forwarded to Debian or marked as Ubuntu-only
+
+* New patches:
   - [ ] No new patches added
   - [ ] Patches match those proposed/committed upstream
   - [ ] Patches correctly included in Debian/patches/series
   - [ ] Patches have correct DEP-3 metadata
+  - [ ] New code not from upstream was forwarded or marked as Ubuntu-only
 
 * Git/maintenance:
   - [ ] Commits are properly split (more important on -dev than on SRUs)
