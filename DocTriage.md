@@ -1,112 +1,29 @@
 # Documentation triage
 
-In order to maintain a line of communication with the community and keep
-Ubuntu Server's documentation up to date, doc triage has been added as a task
-to do during [bug triage](BugTriage.md).
+Documentation is hosted in [github](https://github.com/canonical/ubuntu-server-documentation)
+and from there rendered to PDF and the online view at [Ubuntu Server docs](https://documentation.ubuntu.com/server).
+This kind of structure gave us better interaction rates and contributions than
+on Discourse, but to make them worthwhile we need to ensure we pick up and act
+on what we get there
 
-## Tooling
+## Lists
 
-[Discourse Triage](https://snapcraft.io/dsctriage) (`dsctriage`) is used for
-working with documentation hosted on Discourse. Documentation for the tool is
-located on [GitHub](https://github.com/lvoytek/discourse-triage).
+For the daily triage rotation you only have to look at those issues or pull
+requests created or updated in the time your duty covers.
 
-`dsctriage` can be installed with:
+- [Pull requests](https://github.com/canonical/ubuntu-server-documentation/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc)
+- [Issues](https://github.com/canonical/ubuntu-server-documentation/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 
-```bash
-sudo snap install dsctriage
-```
+Check what the interaction is about and help them to progress and land or resolve.
 
-As a part of daily triage, running the base command will show relevant
-comments for the previous day (or over the weekend).
+## Tag usage in Doc triage
 
-```bash
-dsctriage
-```
+Right now we have a few tags defined that help us to quickly see in what state
+an issue/PR was last time as well as later on allowing volunteers to better find
+how they could help us.
 
-To run the previous day's triage, provide the relevant date or previous day of
-the week, such as:
-
-```bash
-dsctriage 2023-04-27
-```
-
-or
-
-```bash
-dsctriage friday
-```
-
-## Types of updates
-
-Documentation updates fall into a few categories that require different levels
-of action.
-
-### New pages
-
-When someone creates a new page, which in Discourse is a new Topic under the
-relevant category, this will show up as a `+` next to the page title and author
-name. For example:
-
-```text
-+Changing package files [Lena Voytek, 2023-01-11]
-```
-
-If this shows up, the page should be checked to see if it is a candidate for
-the official documentation. If so, note this in the report.
-
-### Page edits
-
-If a given page has been modified in any way, a `*` will show up alongside the
-page title and the name of the editor. This looks like:
-
-```bash
-*Ubuntu Server tutorials [Sally Makin, 2023-04-12]
-```
-
-In this case, check what the edit was and note it in the report. If it has any
-obvious issues, especially if it is a part of the official documentation, make
-sure to note that too.
-
-Also keep in mind when this page was created, as it may need to be triaged as
-a new post too if it was published within the provided time frame.
-
-### Community comments
-
-When a community member comments on a page, it will show up with a `+`
-alongside a link and author name for the comment. A `*` may show up instead if
-the comment was modified. This line will show up as part of a tree of replies
-under its given page name.
-
-Multiple updates to a conversation may also have happened, such as:
-
-```bash
-SSHd now uses socket-base… [Steve Langasek] 
-├─ 77972 [Paride Legovini] 
-│  └─ 80966 [Saxl] 
-│     └─ 81043 [Leszek A. Szczepanowski] 
-│        └─ 83849 [Nebulabox] 
-│           └─ 84773 [Michael Utech] 
-│              └─ +88070 [Piradix, 2023-04-05] 
-├─ +88748 [Dave Ruedeman, 2023-04-19] 
-└─ +88948 [Darren Embry, 2023-04-23] 
-└─ *88978 [Steve Langasek, 2023-04-23] 
-```
-
-Look through the added and updated comments by clicking the attached links. If
-a community member has an unanswered question, either reply with the relevant
-information or note in the report that it needs a reply. For suggestions to
-change the docs, if they are valid, update the page accordingly or note it
-down so someone with relevant permissions can do so.
-
-If no action can be taken immediately, or finding the information will take
-some time, reply to the community member to inform them that we will get back
-to them and thank them for taking the time to leave a comment. This helps to
-set expectations and prevents our community members from feeling ignored (even
-if we cannot provide an answer straight away).
-
-### Team responses
-
-Responses to community comments by someone on the team will look the same as
-other comments. In this case, check to make sure the conversation was resolved,
-and provide extra input if needed.
-
+* `tech-review` used by volunteer triagers, flagging that to go forward this needs a technical or even subject matter expert reviewer.
+* `ODA`: used by triagers to declare a case as a good candidate to be resolved by volunteers of the Open Documentation Academy.
+* `server:need-info`: to represent that this isn't actionable without further into being provided. This matches an incomplete state in [Bug triage](BudTriage.md).
+* Classifiations like `code:*`, `content:*`, `dia:*` can be helpful to allow volunteers to more easily pick cases they can help with, adding them is optional
+  * The use of those only makes sense once a case is actionable and ok for a volunteer to contibute
