@@ -36,9 +36,6 @@ Check formal content:
 
 * Ensure that everything we dropped really can be dropped
   * vice versa, there could be more that could be dropped (often needs a little test to verify which is suggested to the owner of the MR and only rarely done by the reviewer)
-* Are all changes either:
-  * Forwarded to Debian or Upstream so that everyone benefits and we can some day make this a sync again.
-  * Or if they are Ubuntu only choices, marked like that so the next packager is not wondering if we want to keep or submit it?
 
 ### Check the new delta
 
@@ -48,6 +45,10 @@ Check formal content:
   * To be clear, if a certain case asks for violating this rule it is ok, but it should be a conscious decision not an accident
   * The intention is to avoid deviating the code we maintain too much from how the project continues to evolve (hard to maintain well over long periods).
 * Are the patches applied the right way according to `debian/source/format`?
+* Are all changes either:
+  * Forwarded to Debian or Upstream so that everyone benefits and we can some day make this a sync again.
+  * Or if they are Ubuntu only choices, marked like that so the next packager is not wondering if we want to keep or submit it? (See [`UD-forwarded` for commits](CommittingChanges.md#the-commit-message) and [`Forwarded` for patches](DebianPatch.md#the-patchfile-header).
+  * If old delta added in the past does not have such info and you spent the effort to check the history and reasoning to make good decisions, please add the same info to that old-delta.
 
 ### Check for Git/maintenance
 
