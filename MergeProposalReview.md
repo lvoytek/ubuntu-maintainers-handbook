@@ -19,9 +19,7 @@ reviewer to a particular aspect.
 * `N` - Not applicable to this case, e.g. checks only valid for new delta added which might not always be the case
 * `S` - Skipped by the reviewer as it seemed not mandatory or commensurate for this case. An example might be the component mismatch check which is helpful for a complex merge, but there is a tradeoff that goes too far for a SRU bug fix not changing any d/* content.
 
-## Initial review
-
-### Check the new changelog stanza
+## Check the new changelog stanza
 
 * Contains a bug pointer like `(LP: #12345678)` to all associated cases
 * Correctly formatted entries according to the [changelog policy](https://www.debian.org/doc/debian-policy/ch-source.html#debian-changelog-debian-changelog) and our [hints](PackageMerging.md#fix-the-changelog) for merges
@@ -30,12 +28,12 @@ reviewer to a particular aspect.
 * Proper release - `dch` or habits could have selected the wrong one
 * Proper author and email
 
-### Ensure Documentation/release Notes are updated
+## Ensure Documentation/release Notes are updated
 
 * We always did enqueue things that eventually need to be mentioned in the release notes, this check in the MR review is a reminder about that.
 * If the update/merge has implications that need to be documented we always updated documentation alongside changes. Sometimes things get in via a sync or upstream changes, not by us - as we spot these, make sure to spawn a proper backlog tracker for it.
 
-### Check for indirect changes
+## Check for indirect changes
 
 * Some changes can imply that the packaging needs to be adapted. Check content and release notes if there are any changes like that.
 * When merging from Debian or Upstream it is worth checking if there are even newer versions that would be worth it to go for.
@@ -43,12 +41,12 @@ reviewer to a particular aspect.
 * Ensure that the changes in Debian do not imply that we need to update the delta we carry (do not be fooled by applying cleanly)
 * Ensure update maintainer has been run
 
-### Check the old delta
+## Check the old delta
 
 * Ensure that everything we dropped really can be dropped
   * vice versa, there could be more that could be dropped (often needs a little test to verify which is suggested to the owner of the MR and only rarely done by the reviewer)
 
-### Check the new delta
+## Check the new delta
 
 * Do the patches [follow DEP-3](http://dep.debian.net/deps/dep3/)
   * You can use dep3changelog to verify the headers, as well as generate a changelog entry.
@@ -63,11 +61,11 @@ reviewer to a particular aspect.
   * Or if they are Ubuntu only choices, marked like that so the next packager is not wondering if we want to keep or submit it? (See [`UD-forwarded` for commits](CommittingChanges.md#the-commit-message) and [`Forwarded` for patches](DebianPatch.md#the-patchfile-header).
   * If old delta added in the past does not have such info and you spent the effort to check the history and reasoning to make good decisions, please add the same info to that old-delta.
 
-### Check for Git/maintenance
+## Check for Git/maintenance
 
 * Changes are logically split into separate commits (to ease future merges and cherry picking to other releases)
 
-### Check for Build and Test
+## Check for Build and Test
 
 * Ensure the build in the PPA is ok on all architectures it is meant to build.
 * If this is an SRU consider checking that the SRU template in the bug is OK. Test instructions especially are often only understandable for the reporter. We want them to be good before SRU review.
@@ -79,7 +77,7 @@ reviewer to a particular aspect.
   * If possible this should not be done by humans, but autopkgtests. And if it isn't consider adding them. But still sometimes there are situations where one wants to do a quick manual verification to be sure.
 
 
-## Review template
+# Review template
 
 The following template may be useful when submitting reviews:
 
