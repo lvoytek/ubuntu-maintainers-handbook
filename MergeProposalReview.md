@@ -1,16 +1,17 @@
 # Merge Proposal (MP) reviewing
 
-Check formal content:
+Before sponsoring or uploading we established a review culture helping us
+to provide consistent good quality uploads.
 
-* changelog
-* patch naming
-* version numbers
-* patch headers
-* etc
+In review we check for:
+* Issues in the formal content
+* To follow our stylistic (team) choices
+* Common issues
+* If warranted for the case we provide further testing
 
-We use simple symbols we put in a template to check the most common
-cases based on "we should have caught that" lessons learne. The symbols
-we put in are representing the POV of the reviewer to a particular aspect.
+We use symbols that we put into a template to check the most common cases based
+on lessons learned. The symbols we put in are representing the POV of the
+reviewer to a particular aspect.
 
 * `x` - OK
 * `-` - Not OK - Reasons will be outlined in the lines below
