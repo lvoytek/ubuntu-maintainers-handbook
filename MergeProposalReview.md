@@ -8,6 +8,16 @@ Check formal content:
 * patch headers
 * etc
 
+We use simple symbols we put in a template to check the most common
+cases based on "we should have caught that" lessons learne. The symbols
+we put in are representing the POV of the reviewer to a particular aspect.
+
+* `x` - OK
+* `-` - Not OK - Reasons will be outlined in the lines below
+* `?` - Not neccesarily bad, but worth to clarify - Question will be outlined in the lines below
+* `N` - Not applicable to this case, e.g. checks only valid for new delta added which might not always be the case
+* `S` - Skipped by the reviewer as it seemed not mandatory or commensurate for this case. An example might be the component mismatch check which is helpful for a complex merge, but there is a tradeoff that goes too far for a SRU bug fix not changing any d/* content.
+
 ## Initial review
 
 ### Check the new changelog stanza
@@ -73,9 +83,10 @@ The following template may be useful when submitting reviews:
 ```
 Review Symbols:
 x = OK
-- = not OK - reasons outlined in the lines below
-? = question - asked in the lines below
-N = not applicable to this case
+- = Not OK
+? = Question
+N = Not applicable
+S = Skipped
 
 * Changelog:
   - [ ] Changelog entry has correct version and targeted codename
