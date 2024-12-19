@@ -23,7 +23,7 @@ reviewer to a particular aspect.
 
 ### Check the new changelog stanza
 
-* Contains a bug pointer like `(LP: #12345678)` to 
+* Contains a bug pointer like `(LP: #12345678)` to all associated cases
 * Correctly formatted entries according to the [changelog policy](https://www.debian.org/doc/debian-policy/ch-source.html#debian-changelog-debian-changelog) and our [hints](PackageMerging.md#fix-the-changelog) for merges
 * Lists all changes made - the changelog shall be a complete representation
 * Proper version - check against [Version Strings](VersionStrings.md)
