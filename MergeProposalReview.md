@@ -1,7 +1,8 @@
 # Merge Proposal (MP) reviewing
 
 Before sponsoring or uploading we established a review culture helping us
-to provide consistent good quality uploads.
+to provide consistent good quality uploads. To do so we propose our changes
+as [merge proposals aganist `git-ubuntu` branches](MergeProposal.md).
 
 In review we check for:
 * Issues in the formal content
