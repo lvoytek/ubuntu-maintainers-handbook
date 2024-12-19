@@ -56,12 +56,13 @@ Check formal content:
 
 ### Check for Build and Test
 
-* Ensure the build in the PPA is ok on all architectures it is meant to build
+* Ensure the build in the PPA is ok on all architectures it is meant to build.
 * If this is an SRU consider checking that the SRU template in the bug is OK. Test instructions especially are often only understandable for the reporter. We want them to be good before SRU review.
-* If applicable relative to the changes made, consider if tests should be added, adapted or extended
-* Too many cases have been caught late and then intertwined in proposed-migration. Testing autopkgtest on the PPA helps to be confident before entering the archive
-* Depending on the case the test PPA might be used to install and verify functionality of the builds
-  * This is very much an optional service the reviewer can, but does not have to, provide
+* If applicable relative to the changes made, consider if tests should be added, adapted or extended.
+* Too many cases have been caught late and then intertwined in proposed-migration. Testing autopkgtest on the PPA helps to be confident before entering the archive.
+* Especially for complex merges of packages in main, check if we accidentially or intentionally added new dependencies that would cause component mismatches, so we can adapt or prepare a [MIR](MainInclusion.md) before being entangled in the archive.
+* Depending on the case the test PPA might be used to install and verify functionality of the builds.
+  * This is very much an optional service the reviewer can, but does not have to, provide.
   * If possible this should not be done by humans, but autopkgtests. And if it isn't consider adding them. But still sometimes there are situations where one wants to do a quick manual verification to be sure.
 
 
@@ -116,6 +117,7 @@ N = not applicable to this case
   - [ ] This is an SRU, the validation instructions are ok
   - [ ] Testcases added or adapted (N/A if not strictly required or already present)
   - [ ] autopkgtest against the PPA package passes (if possible, evidence was provided already)
+  - [ ] Based on PPA builds and the build-log, no new component mismatch expected
   - [ ] Verified PPA package installs/uninstalls
   - [ ] Verified function manually
 ```
