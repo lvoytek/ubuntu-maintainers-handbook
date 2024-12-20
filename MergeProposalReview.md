@@ -1,24 +1,27 @@
 # Merge Proposal (MP) reviewing
 
-Before sponsoring or uploading we established a review culture helping us
-to provide consistent good quality uploads. To do so we propose our changes
-as [merge proposals aganist `git-ubuntu` branches](MergeProposal.md).
+We established a review process before sponsoring or uploading content, which
+has helped us maintain consistently high quality.
+To do so we propose our changes as [merge proposals against `git-ubuntu` branches](MergeProposal.md).
 
-In review we check for:
-* Issues in the formal content
-* To follow our stylistic (team) choices
-* Common issues
-* If warranted for the case we provide further testing
+In this review, we:
+* Review formal content for issues
+* Ensure adherence to team style guidelines
+* Identify common issues
+* Conduct further testing (when warranted)
 
-We use symbols that we put into a template to check the most common cases based
-on lessons learned. The symbols we put in are representing the POV of the
-reviewer to a particular aspect.
+The following states indicate reviewer feedback on each aspect we want to check.
 
-* `x` - OK
-* `-` - Not OK - Reasons will be outlined in the lines below
-* `?` - Not neccesarily bad, but worth to clarify - Question will be outlined in the lines below
-* `N` - Not applicable to this case, e.g. checks only valid for new delta added which might not always be the case
-* `S` - Skipped by the reviewer as it seemed not mandatory or commensurate for this case. An example might be the component mismatch check which is helpful for a complex merge, but there is a tradeoff that goes too far for a SRU bug fix not changing any d/* content.
+* *OK* - This was checked and there was nothing of concern to be raised.
+* *Not OK* - Something is not as it should be and needs to be changed in the proposed content.
+* *Question* - Not neccesarily bad, but a detail worth to clarify. This could only need an answer, but might due to the discussion also end up in changes to what was proposed.
+* *Not applicable* - The particular check is not applicable to this case
+* *Skipped* - Skipped by the reviewer as it seemed not mandatory or commensurate for this case.
+
+On any of these states further context might be given in the line below. That is
+entirely optional on "OK" or "Not applicable" and to some extent also for "Skipped".
+But any "Not OK" and "Question" needs to get some details added so the requester
+can understand and act on it.
 
 ## Check the new changelog stanza
 
@@ -68,14 +71,14 @@ reviewer to a particular aspect.
 
 ## Check for Build and Test
 
-* Ensure the build in the PPA is ok on all architectures it is meant to build.
+* Verify that the PPA build is successful on all intended architectures.
 * If this is an SRU consider checking that the SRU template in the bug is OK. Test instructions especially are often only understandable for the reporter. We want them to be good before SRU review.
-* If applicable relative to the changes made, consider if tests should be added, adapted or extended.
-* Too many cases have been caught late and then intertwined in proposed-migration. Testing autopkgtest on the PPA helps to be confident before entering the archive.
-* Especially for complex merges of packages in main, check if we accidentially or intentionally added new dependencies that would cause component mismatches, so we can adapt or prepare a [MIR](MainInclusion.md) before being entangled in the archive.
-* Depending on the case the test PPA might be used to install and verify functionality of the builds.
-  * This is very much an optional service the reviewer can, but does not have to, provide.
-  * If possible this should not be done by humans, but autopkgtests. And if it isn't consider adding them. But still sometimes there are situations where one wants to do a quick manual verification to be sure.
+* Where applicable, consider whether tests should be added, adapted, or extended to reflect the changes.
+* Use autopkgtest on the PPA builds to ensure confidence before archive entry and avoid late discovery of issues that might lead to entanglement in other proposed migrations.
+* New runtime dependencies might be added and could cause [component mismatches](ProposedMigration.md#mainuniverse-binary-mismatch). Such would block proposed migration and may necessitate either filing a [MIR](MainInclusion.md) for them or adapting the upload to avoid that dependency.
+* Manual installation of packages from the PPA may be performed to verify the builds, but this is optional.
+  * Automated testing (autopkgtest) is preferred. Suggest adding DEP8 test cases where it would make sense.
+  * In some situations, manual verification of certain behaviors may also be necessary for additional assurance.
 
 
 # Review template
@@ -84,8 +87,8 @@ The following template may be useful when submitting reviews:
 
 ```
 Review Symbols:
-x = OK
-- = Not OK
++ = OK
+! = Not OK
 ? = Question
 N = Not applicable
 S = Skipped
