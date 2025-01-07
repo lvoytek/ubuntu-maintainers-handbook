@@ -22,8 +22,15 @@ Right now we have a few tags defined that help us to quickly see in what state
 an issue/PR was last time as well as later on allowing volunteers to better find
 how they could help us.
 
-* `tech-review` used by volunteer triagers, flagging that to go forward this needs a technical or even subject matter expert reviewer.
-* `Open Documentation Academy`: used by triagers to declare a case as a good candidate to be resolved by volunteers of the Open Documentation Academy.
-* `server:need-info`: to represent that this isn't actionable without further into being provided. This matches an incomplete state in [Bug triage](BudTriage.md).
-* Classifiations like `code:*`, `content:*`, `dia:*` can be helpful to allow volunteers to more easily pick cases they can help with, adding them is optional
-  * The use of those only makes sense once a case is actionable and ok for a volunteer to contibute
+* Review needed
+  * `review: technical`: used by our Author, submitter and volunteer triagers, flagging that to go forward this needs a technical or even subject matter expert reviewer.
+  * `review: wording`: used by our Engineers, submitter and volunteer triagers, flagging that to go forward this needs a review of an Author.
+* For:
+  * `Open Documentation Academy`: used by triagers to declare a case as a good candidate to be resolved by volunteers of the Open Documentation Academy.
+  * `server: ToDo`: mostly matching the [server-todo](BugTriage.md#tagging-server-todo) launchpad tag, representing it is "valid and we should work on it"
+* `state:*` tags used to represet the state of a case 
+  * `state:incomplete`: this isn't actionable without further into being provided. This closely resembles an incomplete state in launchpad [Bug triage](BudTriage.md).
+  * `state:wip`: This PR is up for awareness, but not ready to be reviewed yet.
+  * `state:duplicate`: This issue or pull request already exists, used represent why a case was closed.
+  * `state:invalid`: This doesn't seem right, used represent why a case was closed.
+* Classifiations like `code:*` and `content:*` can be helpful more easily pick cases one can help with, adding them is optional
