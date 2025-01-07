@@ -23,7 +23,7 @@ an issue/PR was last time as well as later on allowing volunteers to better find
 how they could help us.
 
 * `tech-review` used by volunteer triagers, flagging that to go forward this needs a technical or even subject matter expert reviewer.
-* `ODA`: used by triagers to declare a case as a good candidate to be resolved by volunteers of the Open Documentation Academy.
+* `Open Documentation Academy`: used by triagers to declare a case as a good candidate to be resolved by volunteers of the Open Documentation Academy.
 * `server:need-info`: to represent that this isn't actionable without further into being provided. This matches an incomplete state in [Bug triage](BudTriage.md).
 * Classifiations like `code:*`, `content:*`, `dia:*` can be helpful to allow volunteers to more easily pick cases they can help with, adding them is optional
   * The use of those only makes sense once a case is actionable and ok for a volunteer to contibute
