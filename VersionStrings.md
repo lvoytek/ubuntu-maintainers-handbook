@@ -282,3 +282,22 @@ List of this and further related examples:
 | 7.80+dfsg1-5   | 7.91+dfsg1-1 | 7.91+dfsg1+really7.80+dfsg1-1ubuntu1 (Ubuntu upload) |
 | 7.80+dfsg1-5   | 7.91+dfsg1-1 | 7.91+dfsg1+really7.80+dfsg1-1 (Debian upload)        |
 | 7.80+dfsg1-5   | 7.91+dfsg1-1 | 7.91+dfsg1+really7.80+dfsg1-1ubuntu0.1 (Ubuntu SRU)  |
+
+
+## Version: Further reading
+
+Right at the beginning we had the link to the underlying concepts in Debian
+referring to the [Debian control field "Version"](https://www.debian.org/doc/debian-policy/ch-controlfields.html#version)
+for overall topic awareness.
+
+But of course there are more special cases, one that you might encounter is package uploads based on repository content.
+This is most commonly done:
+
+* If upstreams do not yet have a new release, but we'd like to have all the content up to a certain point in time/git.
+* In cases where the upstream release is imminent, but to meet freeze deadlines one uploads the state from git (but going to final before the release)
+* If upstream is only using nightly builds and you need to pick one of them
+
+At a high level you'd either go before the next version `{upcoming_version}~git...` or
+if this seems more appropriate to the case ahead of the current `{current_version}+git...`.
+The former is more common, the latter a special case for example considered if nobody knows if/when/what the new revision will be.
+The underlying principles are outlined in more detail in the [Debian Wiki](https://wiki.debian.org/Versioning)
