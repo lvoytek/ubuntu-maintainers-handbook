@@ -256,6 +256,37 @@ total packages required to install Ubuntu, but contain packages that supersede
 those in a different suite if overlaid on top of it. Some examples of partial
 suites are `backports`, `proposed`, `security`, and `updates`.
 
+#### updates
+
+Once an Ubuntu version is released, the `series` pocket stops receiving new
+package versions, but updates to the initial set are still uploaded with
+diverse fixes. Versions with regular bug fixes, or potential new features,
+are present in `series-updates`.
+
+#### security
+
+The `series-security` suite carries security fixes to packages in `series`.
+The updates there are maintained by the security team.
+
+#### proposed
+
+When any package is uploaded to Ubuntu, it will land in `series-proposed`. This
+suite is used for testing the package to make sure it builds and that tests
+pass before the uploaded version can be copied into the release itself. During
+the development of a new release, packages that are considered in a good state
+migrate from `series-proposed` to `series`. After the release, updates to the
+packages migrate from `series-proposed` to `series-updates` (as part of the
+SRU process).
+
+#### backports
+
+Software in `series-backports` may not have been tested as extensively as that
+contained in the above examples, although it includes newer versions of some
+applications that may provide useful features. Those versions are usually
+present in subsequent Ubuntu releases, and are copied back to previous
+releases. Software in backports will not receive any review or updates from the
+Ubuntu security team.
+
 
 ## Source (launchpad) model
 
