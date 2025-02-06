@@ -161,30 +161,8 @@ restricted/         2017-10-24 22:44    -
 universe/           2017-10-25 13:33    -
 ```
 
-
-### Repositories
-
-#### Main
-
-The main packages in this distribution, supported by the Ubuntu team.
-
-#### Restricted
-
-Packages supported by the Ubuntu team, which are not available under a
-completely free license.
-
-#### Universe
-
-Software from this repository is mostly unsupported by the Ubuntu Server team.
-Software in Universe may be reviewed or get updates from the Server team if the
-Universe package is directly related to a Server Package in Main.
-
-#### Multiverse
-
-Software from this repository is entirely unsupported by the Ubuntu team, and
-may not be provided under a free license. Software in multiverse will not
-receive any review or updates from the Ubuntu security team.
-
+To know more about how the repositories (also known as components) work,
+[check the documentation](https://help.ubuntu.com/community/Repositories).
 
 ### APT
 
