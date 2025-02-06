@@ -170,10 +170,8 @@ The main packages in this distribution, supported by the Ubuntu team.
 
 #### Restricted
 
-Software from this repository may not have been tested as extensively as that
-contained in the main release, although it includes newer versions of some
-applications which may provide useful features. Software in backports will not
-receive any review or updates from the Ubuntu security team.
+Packages supported by the Ubuntu team, which are not available under a
+completely free license.
 
 #### Universe
 
