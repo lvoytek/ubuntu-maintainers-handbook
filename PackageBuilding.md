@@ -266,11 +266,14 @@ $ sudo sbuild-update -udcar <schroot>
 $ DEB_BUILD_OPTIONS="<options>" sbuild -Ad<schroot> <dsc file>
 ```
 
-And more concrete asan example building qemu in noble with a concurrency of 3:
+And more concrete as an example building qemu in noble with a concurrency of 3:
 ```bash
 $ sudo sbuild-update -udcar noble-proposed-amd64
 $ DEB_BUILD_OPTIONS="parallel=3" sbuild -Adnoble-proposed-amd64 qemu_8.2.2+ds-0ubuntu2.dsc
 ```
+
+> **Note**:
+> From Ubuntu 23.04 (Lunar Lobster), the `series-proposed` suite is [disabled by default](https://wiki.ubuntu.com/Testing/EnableProposed) via [APT Preferences](https://wiki.debian.org/AptConfiguration#apt_preferences_.28APT_pinning.29). This affects schroots created with `sbuild-launchpad-chroot`, so proposed packages [may not be used in the build process](https://bugs.launchpad.net/ubuntu/+source/sbuild-launchpad-chroot/+bug/1996205) in this case.
 
 For more information, see:
 

@@ -161,32 +161,8 @@ restricted/         2017-10-24 22:44    -
 universe/           2017-10-25 13:33    -
 ```
 
-
-### Repositories
-
-#### Main
-
-The main packages in this distribution, supported by the Ubuntu team.
-
-#### Restricted
-
-Software from this repository may not have been tested as extensively as that
-contained in the main release, although it includes newer versions of some
-applications which may provide useful features. Software in backports will not
-receive any review or updates from the Ubuntu security team.
-
-#### Universe
-
-Software from this repository is mostly unsupported by the Ubuntu Server team.
-Software in Universe may be reviewed or get updates from the Server team if the
-Universe package is directly related to a Server Package in Main.
-
-#### Multiverse
-
-Software from this repository is entirely unsupported by the Ubuntu team, and
-may not be provided under a free license. Software in multiverse will not
-receive any review or updates from the Ubuntu security team.
-
+To know more about how the repositories (also known as components) work,
+[check the documentation](https://help.ubuntu.com/community/Repositories).
 
 ### APT
 
@@ -257,6 +233,37 @@ Some suites are known as 'partial suites'. They contain only a subset of the
 total packages required to install Ubuntu, but contain packages that supersede
 those in a different suite if overlaid on top of it. Some examples of partial
 suites are `backports`, `proposed`, `security`, and `updates`.
+
+#### updates
+
+Once an Ubuntu version is released, the `series` pocket stops receiving new
+package versions, but updates to the initial set are still uploaded with
+diverse fixes. Versions with regular bug fixes, or potential new features,
+are present in `series-updates`.
+
+#### security
+
+The `series-security` suite carries security fixes to packages in `series`.
+The updates there are maintained by the security team.
+
+#### proposed
+
+When any package is uploaded to Ubuntu, it will land in `series-proposed`. This
+suite is used for testing the package to make sure it builds and that tests
+pass before the uploaded version can be copied into the release itself. During
+the development of a new release, packages that are considered in a good state
+migrate from `series-proposed` to `series`. After the release, updates to the
+packages migrate from `series-proposed` to `series-updates` (as part of the
+SRU process).
+
+#### backports
+
+Software in `series-backports` may not have been tested as extensively as that
+contained in the above examples, although it includes newer versions of some
+applications that may provide useful features. Those versions are usually
+present in subsequent Ubuntu releases, and are copied back to previous
+releases. Software in backports will not receive any review or updates from the
+Ubuntu security team.
 
 
 ## Source (launchpad) model
