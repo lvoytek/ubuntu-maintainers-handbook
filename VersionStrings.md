@@ -287,19 +287,20 @@ Combined that makes this an uncommon mix of the rules usually applied to:
 Let us define how such a case could be handled for the example of snapd:
 
 * The first element of the version matches the upstream version it represents, like `2.67`
-* Since this is backported to multiple releases at the same version, but being native can't have an `-X` or `ubuntuX` the pre-release suffix is added via `+YY.MM`
+* Since this is backported to multiple releases at the same version, but being native can't have an `-` like in the usual `-X` or `-XubuntuY`. But it can have the suffix is added via `+ubuntuYY.MM`
+  * Note: former versions just added `+YY.MM` but for symmetry and to avoid e.g. conflicts with the auto-sync process `+ubuntuYY.MM` should be the way to go
 * If iterations on the same upstream version and for the same target Ubuntu release are needed add an increment counter `.x" as suffix
 
-| Previous            | New upstream 2.67 | Changes inside of 2.66 |
-| ------------------- | ----------------- | ---------------------- |
-| LTS: 2.66+24.04     | 2.67+24.04        | 2.66+24.04.1           |
-| Devel: 2.66+25.04   | 2.67+25.04        | 2.66+25.04.1           |
-| LTS: 2.66+24.04.1   | 2.67+24.04        | 2.66+24.04.2           |
-| Devel: 2.66+25.04.1 | 2.67+25.04        | 2.66+25.04.2           |
+| Previous                  | New upstream 2.67 | Changes inside of 2.66 |
+| ------------------------- | ----------------- | ---------------------- |
+| LTS: 2.66+ubuntu24.04     | 2.67+ubuntu24.04  | 2.66+ubuntu24.04.1     |
+| Devel: 2.66+ubuntu25.04   | 2.67+ubuntu25.04  | 2.66+ubuntu25.04.1     |
+| LTS: 2.66+ubuntu24.04.1   | 2.67+ubuntu24.04  | 2.66+ubuntu24.04.2     |
+| Devel: 2.66+ubuntu25.04.1 | 2.67+ubuntu25.04  | 2.66+ubuntu25.04.2     |
 
 > Yes, no more being a _real_ native package means this could also become
-> `2.68-1` or `2.68-0ubuntu1` now and thereby be more "normal" rules apply, but
-> until the release process can handle that the above is an example how we can
+> `2.68-0ubuntu1` and thereby the more "normal" rules would apply, but
+> until the release process can handle it the above is an example how we can
 > apply the same rules outlined here to almost any case and still ensure
 > upgradability and some reasonable instant insight looking at only the
 > version number.
