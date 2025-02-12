@@ -188,7 +188,7 @@ Simply run `dch` from inside the repository and follow the instructions.
 ## Commit the changelog
 
 ```bash
-$ git commit -m changelog debian/changelog
+$ git commit -m "Update changelog" debian/changelog
 ```
 
 
