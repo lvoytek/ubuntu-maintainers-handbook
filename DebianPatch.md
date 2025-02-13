@@ -123,6 +123,14 @@ the following pattern for the file name emerged:
 debian/patches/lp-<bugnumber>-<patchindex>-<description>.patch`
 ```
 
+Alternatively, a `lp<bugnumber>/<patchindex>-<description>.patch` format can be
+used, as supported by automated tooling, such as git-buildpackage patch-queue.
+To do that add the following `gbp pq` pseudo header into you patch-queue
+commits:
+```
+Gbp-Pq: Topic lp<bugnumber>
+```
+
 The one case where this naming scheme can be harmful is that you'd usually
 not want to upstream this file name to Debian as the launchpad bug does
 not mean much there.
