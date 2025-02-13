@@ -31,8 +31,28 @@ Debian Import Freeze. You can check the
 for current releases in development. The Debian package is on
 [`testing`](https://www.debian.org/releases/), so doing an
 [explicit sync](https://wiki.ubuntu.com/SyncRequestProcess#Content_of_a_sync_request)
-is unnecessary, but we have to fill the MP for the
-unfinished-and-not-necessary-merge in the following way:
+is unnecessary. 
+
+### Simple Case
+
+In simple cases, opening a bug with the required information is sufficient. `sass-spec` bug
+for 25.04 is [a good example](https://bugs.launchpad.net/ubuntu/+source/sass-spec/+bug/2098389).
+
+- Ensure the patch or upstream information is included
+- provide the patch which has been adopted upstream
+
+Cases like this may be:
+
+- Debian adopts the same patch as Ubuntu, possibly with a different name
+- Upstream has accepted the change, Debian takes upstream, and Ubuntu can drop its delta
+    - simple here being a single patch. for many patches see below
+
+### Complex Case
+
+When multiple changes are adopted, and many patches can be dropped, an MP may be helpful
+for reviewers to understand the change. Also ensure there is an accompanying bug, either a 
+merge bug from the Server team automation, changing it to a sync, or a new sync bug.
+
 
 - Specify that the MP is for a sync request.
 - Write down how you discovered it is a sync: changelog entries, step in where
