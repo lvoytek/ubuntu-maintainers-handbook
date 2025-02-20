@@ -1242,7 +1242,7 @@ Next step: [Update the merge proposal](#update-the-merge-proposal)
 ### Empty directories
 
 We need to use a
-[python script](https://git.launchpad.net/~racb/usd-importer/plain/wip/emptydirfixup.py?h=emptydirfixup)
+[python script](https://git.launchpad.net/~racb/git-ubuntu/tree/wip/emptydirfixup.py?h=emptydirfixup)
 written by Robie Basak (@racb). Why is it a problem that we get empty
 directories?
 
