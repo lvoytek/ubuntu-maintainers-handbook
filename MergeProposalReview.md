@@ -4,7 +4,15 @@ We established a review process before sponsoring or uploading content, which
 has helped us maintain consistently high quality.
 To do so we propose our changes as [merge proposals against `git-ubuntu` branches](MergeProposal.md).
 
-## Chose the appropriate level of scrutiny
+## Review Process
+
+In this review, we:
+* Review formal content for issues
+* Ensure adherence to team style guidelines
+* Identify common issues
+* Conduct further testing (when warranted)
+
+### Chose the appropriate level of scrutiny
 
 Before we go into any details on our review process we have to admit that,
 sometimes a proposal can be rather trivial.
@@ -21,15 +29,7 @@ Therefore we acknoledge that we have two kind of changes we might propose:
   * In this case the review can be free form and rather short
   * But if the reviewer has a hunch or disagrees with that classification they are entitled to do a full pass.
 
-## What we review
-
-In this review, we:
-* Review formal content for issues
-* Ensure adherence to team style guidelines
-* Identify common issues
-* Conduct further testing (when warranted)
-
-## States for each template entry
+### States for each template entry
 
 The following states indicate reviewer feedback on each aspect we check.
 
@@ -39,7 +39,7 @@ The following states indicate reviewer feedback on each aspect we check.
 * *Not applicable* - The particular check is not applicable to this case
 * *Skipped* - Skipped by the reviewer as it seemed not mandatory or commensurate for this case.
 
-## Skipping whole sections
+### Skipping whole sections
 
 Not every change needs all the checks we have in our template. If you would end
 up marking all elements of a section as `skipped` feel free to drop the whole
@@ -48,7 +48,7 @@ section to make the post have a lower percentage of noisy non-content text.
 A common case for this are the checks in regard to "package merges", "new delta
 in debian/", or "new patches".
 
-## How to provide feedback details
+### How to provide feedback details
 
 On any of these states further context might be given in the line below. That is
 entirely optional on "OK" or "Not applicable" and to some extent also for "Skipped" states.
@@ -63,7 +63,13 @@ clear if things are blocking or optional.
 Reviews do not even need to be only critique, if you see something nice
 remember the `praise:` label exists.
 
-## Check the new changelog stanza
+## What we review
+
+The following is an overview of common things we look out for. Obviously each
+case is different and a review can also check for anything else they consider
+appropriate for the situation.
+
+### Check the new changelog stanza
 
 * Contains a bug pointer like `(LP: #12345678)` to all associated cases
 * Correctly formatted entries according to the [changelog policy](https://www.debian.org/doc/debian-policy/ch-source.html#debian-changelog-debian-changelog) and our [hints](PackageMerging.md#fix-the-changelog) for merges
@@ -72,12 +78,12 @@ remember the `praise:` label exists.
 * Proper release - `dch` or habits could have selected the wrong one
 * Proper author and email
 
-## Ensure Documentation/release Notes are updated
+### Ensure Documentation/release Notes are updated
 
 * We always did enqueue things that eventually need to be mentioned in the release notes, this check in the MR review is a reminder about that.
 * If the update/merge has implications that need to be documented we always updated documentation alongside changes. Sometimes things get in via a sync or upstream changes, not by us - as we spot these, make sure to spawn a proper backlog tracker for it.
 
-## Check for indirect changes
+### Check for indirect changes
 
 * Some changes can imply that the packaging needs to be adapted. Check content and release notes if there are any changes like that.
 * When merging from Debian or Upstream it is worth checking if there are even newer versions that would be worth it to go for.
@@ -85,12 +91,12 @@ remember the `praise:` label exists.
 * Ensure that the changes in Debian do not imply that we need to update the delta we carry (do not be fooled by applying cleanly)
 * Ensure update maintainer has been run
 
-## Check the old delta
+### Check the old delta
 
 * Ensure that everything we dropped really can be dropped
   * vice versa, there could be more that could be dropped (often needs a little test to verify which is suggested to the owner of the MR and only rarely done by the reviewer)
 
-## Check the new delta
+### Check the new delta
 
 * Do the patches [follow DEP-3](http://dep.debian.net/deps/dep3/)
   * You can use dep3changelog to verify the headers, as well as generate a changelog entry.
@@ -105,11 +111,11 @@ remember the `praise:` label exists.
   * Or if they are Ubuntu only choices, marked like that so the next packager is not wondering if we want to keep or submit it? (See [`UD-forwarded` for commits](CommittingChanges.md#the-commit-message) and [`Forwarded` for patches](DebianPatch.md#the-patchfile-header).
   * If old delta added in the past does not have such info and you spent the effort to check the history and reasoning to make good decisions, please add the same info to that old-delta.
 
-## Check for Git/maintenance
+### Check for Git/maintenance
 
 * Changes are logically split into separate commits (to ease future merges and cherry picking to other releases)
 
-## Check for Build and Test
+### Check for Build and Test
 
 * Verify that the PPA build is successful on all intended architectures.
 * If this is an SRU consider checking that the SRU template in the bug is OK. Test instructions especially are often only understandable for the reporter. We want them to be good before SRU review.
@@ -121,9 +127,11 @@ remember the `praise:` label exists.
   * In some situations, manual verification of certain behaviors may also be necessary for additional assurance.
 
 
-# Review template
+## Review template
 
-The following template may be useful when submitting reviews:
+The following template may be useful when submitting reviews, it covers all
+the usual checks we describe above making it an easy checkbox approach to not
+miss any.
 
 ```
 Review Symbols:
