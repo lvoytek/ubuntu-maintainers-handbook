@@ -4,6 +4,23 @@ We established a review process before sponsoring or uploading content, which
 has helped us maintain consistently high quality.
 To do so we propose our changes as [merge proposals against `git-ubuntu` branches](MergeProposal.md).
 
+## Chose the appropriate level of scrutiny
+
+Before we go into any details on our review process we have to admit that,
+sometimes a proposal can be rather trivial.
+And while we love the rigor we have established and holding each other
+accountable to it, we also hate inneficiency.
+
+Therefore we acknoledge that we have two kind of changes we might propose:
+* Changes are complex or there is any kind of remaining uncertainty
+  * Full review please as outlined below (the default)
+* Changes are trivial:
+  * The requester is only looking for a second pair of eyes for lapses that might have happened unaware and unintentionally. But not after a deper check as we'd usually do.
+  * In this case the requester shall mark the proposal by stating "Trivial change" in the description.
+  * Depending on the case that might also lift some other common practise we have like pre-building in PPA and pre-testing autopkgtest against it
+  * In this case the review can be free form and rather short
+  * But if the reviewer has a hunch or disagrees with that classification they are entitled to do a full pass.
+
 ## What we review
 
 In this review, we:
