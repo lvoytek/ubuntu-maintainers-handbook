@@ -18,6 +18,15 @@ The following states indicate reviewer feedback on each aspect we want to check.
 * *Not applicable* - The particular check is not applicable to this case
 * *Skipped* - Skipped by the reviewer as it seemed not mandatory or commensurate for this case.
 
+## Skipping whole sections
+
+Not every change needs all the checks we have in our template. If you would end
+up marking all elements of a section as `skipped` feel free to drop the whole
+section to make the post have a lower percentage of noisy non-content text.
+
+A common case for this are the checks in regard to "package merges", "new delta
+in debian/", or "new patches".
+
 ## How to provide feedback details
 
 On any of these states further context might be given in the line below. That is
