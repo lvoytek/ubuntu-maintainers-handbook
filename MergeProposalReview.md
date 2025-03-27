@@ -18,10 +18,20 @@ The following states indicate reviewer feedback on each aspect we want to check.
 * *Not applicable* - The particular check is not applicable to this case
 * *Skipped* - Skipped by the reviewer as it seemed not mandatory or commensurate for this case.
 
+## How to provide feedback details
+
 On any of these states further context might be given in the line below. That is
-entirely optional on "OK" or "Not applicable" and to some extent also for "Skipped".
-But any "Not OK" and "Question" needs to get some details added so the requester
-can understand and act on it.
+entirely optional on "OK" or "Not applicable" and to some extent also for "Skipped" states.
+But any "Not OK" and "Question" state the reviewer shall provide some details
+to allow the requester to understand and act on it.
+
+Furthermore when providing feedback we strive to follow the style of
+[conventional comments](https://conventionalcomments.org/) which allow us to
+bring up a lot - thereby helping each other - without locking us too much in
+review iterations. Such a simple prefix helps in many common cases, making it
+clear if things are blocking or optional.
+Reviews do not even need to be only critique, if you see something nice
+remember the `praise:` label exists.
 
 ## Check the new changelog stanza
 
