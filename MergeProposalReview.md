@@ -4,13 +4,17 @@ We established a review process before sponsoring or uploading content, which
 has helped us maintain consistently high quality.
 To do so we propose our changes as [merge proposals against `git-ubuntu` branches](MergeProposal.md).
 
+## What we review
+
 In this review, we:
 * Review formal content for issues
 * Ensure adherence to team style guidelines
 * Identify common issues
 * Conduct further testing (when warranted)
 
-The following states indicate reviewer feedback on each aspect we want to check.
+## States for each template entry
+
+The following states indicate reviewer feedback on each aspect we check.
 
 * *OK* - This was checked and there was nothing of concern to be raised.
 * *Not OK* - Something is not as it should be and needs to be changed in the proposed content.
