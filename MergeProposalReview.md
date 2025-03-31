@@ -25,9 +25,9 @@ Therefore, we acknowledge that we have two kinds of changes we might propose:
 * Changes are trivial:
   * The requester is only looking for a second pair of eyes for lapses that might have happened unaware and unintentionally. But not after a deeper check as we'd usually do.
   * In this case the requester shall mark the proposal by stating **Trivial change** in the description.
-  * Depending on the case that might also lift some other common practice we have, like pre-building in PPA and pre-testing autopkgtest against it.
   * In this case the review can be free form and rather short.
   * But if the reviewer has a hunch or disagrees with that classification they are entitled to do a full pass.
+  * Depending on the case such trivial changes can also free from further, otherwise required, practice that we have. Like pre-building in PPA and pre-testing autopkgtest against it.
 
 ### States for each template entry
 
