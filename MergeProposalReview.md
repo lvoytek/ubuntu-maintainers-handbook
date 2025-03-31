@@ -12,21 +12,21 @@ In this review, we:
 * Identify common issues
 * Conduct further testing (when warranted)
 
-### Chose the appropriate level of scrutiny
+### Choose the appropriate level of scrutiny
 
 Before we go into any details on our review process we have to admit that,
 sometimes a proposal can be rather trivial.
 And while we love the rigor we have established and holding each other
-accountable to it, we also hate inneficiency.
+accountable to it, we also hate inefficiency.
 
-Therefore we acknoledge that we have two kind of changes we might propose:
+Therefore, we acknoledge that we have two kinds of changes we might propose:
 * Changes are complex or there is any kind of remaining uncertainty
   * Full review please as outlined below (the default)
 * Changes are trivial:
-  * The requester is only looking for a second pair of eyes for lapses that might have happened unaware and unintentionally. But not after a deper check as we'd usually do.
-  * In this case the requester shall mark the proposal by stating "Trivial change" in the description.
-  * Depending on the case that might also lift some other common practise we have like pre-building in PPA and pre-testing autopkgtest against it
-  * In this case the review can be free form and rather short
+  * The requester is only looking for a second pair of eyes for lapses that might have happened unaware and unintentionally. But not after a deeper check as we'd usually do.
+  * In this case the requester shall mark the proposal by stating **Trivial change** in the description.
+  * Depending on the case that might also lift some other common practice we have, like pre-building in PPA and pre-testing autopkgtest against it.
+  * In this case the review can be free form and rather short.
   * But if the reviewer has a hunch or disagrees with that classification they are entitled to do a full pass.
 
 ### States for each template entry
@@ -35,7 +35,7 @@ The following states indicate reviewer feedback on each aspect we check.
 
 * *OK* - This was checked and there was nothing of concern to be raised.
 * *Not OK* - Something is not as it should be and needs to be changed in the proposed content.
-* *Question* - Not neccesarily bad, but a detail worth to clarify. This could only need an answer, but might due to the discussion also end up in changes to what was proposed.
+* *Question* - Not necessarily bad, but a detail worth clarifying. This could only need an answer, but might as a result of the discussion also end up in changes to what was proposed.
 * *Not applicable* - The particular check is not applicable to this case
 * *Skipped* - Skipped by the reviewer as it seemed not mandatory or commensurate for this case.
 
@@ -52,11 +52,11 @@ in debian/", or "new patches".
 
 On any of these states further context might be given in the line below. That is
 entirely optional on "OK" or "Not applicable" and to some extent also for "Skipped" states.
-But any "Not OK" and "Question" state the reviewer shall provide some details
+But for any "Not OK" and "Question" state the reviewer shall provide some details
 to allow the requester to understand and act on it.
 
 Furthermore when providing feedback we strive to follow the style of
-[conventional comments](https://conventionalcomments.org/) which allow us to
+[conventional comments](https://conventionalcomments.org/) which allows us to
 bring up a lot - thereby helping each other - without locking us too much in
 review iterations. Such a simple prefix helps in many common cases, making it
 clear if things are blocking or optional.
@@ -66,7 +66,7 @@ remember the `praise:` label exists.
 ## What we review
 
 The following is an overview of common things we look out for. Obviously each
-case is different and a review can also check for anything else they consider
+case is different and a reviewer can also check for anything else they consider
 appropriate for the situation.
 
 ### Check the new changelog stanza
@@ -129,9 +129,8 @@ appropriate for the situation.
 
 ## Review template
 
-The following template may be useful when submitting reviews, it covers all
-the usual checks we describe above making it an easy checkbox approach to not
-miss any.
+Use this template for reviews; it includes all standard criteria as checkboxes,
+making it easy to avoid omissions.
 
 ```
 Review Symbols:
