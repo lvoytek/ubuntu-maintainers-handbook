@@ -19,7 +19,7 @@ sometimes a proposal can be rather trivial.
 And while we love the rigor we have established and holding each other
 accountable to it, we also hate inefficiency.
 
-Therefore, we acknoledge that we have two kinds of changes we might propose:
+Therefore, we acknowledge that we have two kinds of changes we might propose:
 * Changes are complex or there is any kind of remaining uncertainty
   * Full review please as outlined below (the default)
 * Changes are trivial:
