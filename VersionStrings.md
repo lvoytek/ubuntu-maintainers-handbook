@@ -157,7 +157,7 @@ The only change from the normal ubuntu version scheme is to the _ubuntu revision
 * Never increment X in the numeric `ubuntuX.Y` suffix. An Ubuntu delta is always captured in Y.
 * If this is the first change via the SRU process, add the `.1` suffix, like: `ubuntu3 -> ubuntu3.1`.
 * If no `ubuntuX` was present before, then set `ubuntu0.1` which will represent that there was no Ubuntu delta (`0`) before this upload which is the first to add a change (`.1`).
-* If two releases have the same version, then this would make the package non upgradeable and cause a version conflict (two builds, but not the same). To resolve this, add the numeric `YY.MM` release version in between `ubuntuX` and the increment `.1`. For Jammy that might look like `...ubuntu3.22.04.1`
+* If two releases have the same version, then this would make the package non upgradeable and cause a version conflict (two builds, but not the same). To resolve this, add the numeric `YY.MM` release version in between `ubuntuX` and the increment `.1`. For Jammy that suffix might look like `ubuntu3.22.04.1`
 
 Compare these examples with the _[adding a change in the current Ubuntu development release](VersionStrings.md#version-adding-a-change-in-the-current-ubuntu-development-release)_ section above to better see the subtle difference.
 
@@ -192,10 +192,10 @@ Due to that in a Debian native package, there is no `-debian_revision`.
 This continues into _native Ubuntu packages_, which also do not have a `-debian_revision`.
 But remember that the package namespace is shared between Debian and Ubuntu, therefore a native Ubuntu package `foo` of version `1.0` could be overwritten if Debian ever adds `foo` > `1.0`.
 And that would even happen automatically via the [auto-sync](https://canonical-ubuntu-packaging-guide.readthedocs-hosted.com/en/latest/explanation/debian-merges-and-syncs/#sync).
-To avoid this, it is recommended to add a `..ubuntu0` suffix to the package.
+To avoid this, it is recommended to add a `ubuntu0` suffix to the package.
 
 We'd also like to be able to differentiate between "a native Debian package that got an Ubuntu Delta added" which could be `2.0ubuntu1`, and "a native Ubuntu package".
-Therefore the marker suffix for a native package shall be `..ubuntu0` and not itself be incremented.
+Therefore the marker suffix for a native package shall be `ubuntu0` and not itself be incremented.
 
 Furthermore native package versioning is package dependent; whether if it uses only _major_, or a _major.minor_, or any other version pattern is the maintainer's choice.
 Just as usually upstream can and will version software the way they consider the best.
@@ -224,9 +224,9 @@ Native in Ubuntu:
 
 Note: The rule of multiple releases having the same version requiring to add also a per-release YY.MM to differentiate and ensure upgradability might apply here as well.
 
-Note: There might be reasons that the maintainer wants the native Ubuntu package to not have a `..ubuntu0` suffix, for example if auto-sync overwriting it is desired.
+Note: There might be reasons that the maintainer wants the native Ubuntu package to not have a `ubuntu0` suffix, for example if auto-sync overwriting it is desired.
 An example might be corodinated uploads to both Distributions in freeze times when the auto-sync is disabled.
-In any such case that deviates from the recommendation to have a `..ubuntu0` suffix should have an entry in `debian/README.source` that explains the reasoning, to allow fellow packagers to understand.
+In any such case that deviates from the recommendation to have a `ubuntu0` suffix should have an entry in `debian/README.source` that explains the reasoning, to allow fellow packagers to understand.
 
 ## Version: Backport from upstream
 
