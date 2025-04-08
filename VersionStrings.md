@@ -194,7 +194,7 @@ But remember that the package namespace is shared between Debian and Ubuntu, the
 And that would even happen automatically via the [auto-sync](https://canonical-ubuntu-packaging-guide.readthedocs-hosted.com/en/latest/explanation/debian-merges-and-syncs/#sync).
 To avoid this, it is recommended to add a `..ubuntu0` suffix to the package.
 
-We'd also like to be able to differentiate between "a native Debian package that got a Ubuntu Delta added" which could be `2.0ubuntu1` and "a Ubuntu native package".
+We'd also like to be able to differentiate between "a native Debian package that got an Ubuntu Delta added" which could be `2.0ubuntu1`, and "a native Ubuntu package".
 Therefore the marker suffix for a native package shall be `..ubuntu0` and not itself be incremented.
 
 Furthermore native package versioning is package dependent; whether if it uses only _major_, or a _major.minor_, or any other version pattern is the maintainer's choice.
