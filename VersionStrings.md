@@ -227,6 +227,7 @@ Note: The rule of multiple releases having the same version requiring to add als
 Note: There might be reasons that the maintainer wants the native Ubuntu package to not have a `ubuntu0` suffix, for example if auto-sync overwriting it is desired.
 An example might be corodinated uploads to both Distributions in freeze times when the auto-sync is disabled.
 In any such case that deviates from the recommendation to have a `ubuntu0` suffix should have an entry in `debian/README.source` that explains the reasoning, to allow fellow packagers to understand.
+If the deviation is expected to last less than one full Ubuntu development cycle, then a note in debian/changelog is sufficient.
 
 ## Version: Backport from upstream
 
