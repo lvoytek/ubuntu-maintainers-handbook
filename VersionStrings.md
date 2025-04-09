@@ -190,7 +190,7 @@ Due to that in a Debian native package, there is no `-debian_revision`.
 > Example in detail: _A package native to Debian `2.0` (no `-`), getting an Ubuntu change in the devel release would use `2.0ubuntu1`_
 
 This continues into _native Ubuntu packages_, which also do not have a `-debian_revision`.
-But remember that the package namespace is shared between Debian and Ubuntu, therefore a native Ubuntu package `foo` of version `1.0` could be overwritten if Debian ever adds `foo` > `1.0`.
+But remember that the package namespace is shared between Debian and Ubuntu, therefore a native Ubuntu package `foo` of version `1.0` could be overwritten if Debian ever adds `foo` > `1.0` (If not blocked the newer according to `dpkg --compare-versions` will be synced).
 And that would even happen automatically via the [auto-sync](https://canonical-ubuntu-packaging-guide.readthedocs-hosted.com/en/latest/explanation/debian-merges-and-syncs/#sync).
 To avoid this, it is recommended to add a `ubuntu0` suffix to the package.
 
