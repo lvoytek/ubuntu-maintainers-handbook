@@ -224,10 +224,10 @@ Native in Ubuntu:
 
 Note: The rule of multiple releases having the same version requiring to add also a per-release YY.MM to differentiate and ensure upgradability might apply here as well.
 
-Note: There might be reasons that the maintainer wants the native Ubuntu package to not have a `ubuntu0` suffix, for example if auto-sync overwriting it is desired.
-An example might be corodinated uploads to both Distributions in freeze times when the auto-sync is disabled.
-In any such case that deviates from the recommendation to have a `ubuntu0` suffix should have an entry in `debian/README.source` that explains the reasoning, to allow fellow packagers to understand.
-If the deviation is expected to last less than one full Ubuntu development cycle, then a note in debian/changelog is sufficient.
+Note: There might be reasons that the maintainer wants the native Ubuntu package to not have a `ubuntu0` suffix, for example if overwriting via auto-sync is desired.
+An example might be coordinated uploads to both Distributions in freeze times when the auto-sync is disabled.
+In any such case that deviates from the recommendation to have a `ubuntu0` suffix, the package should have an entry in `debian/README.source` that explains the reasoning, to allow fellow packagers to understand.
+If the deviation is expected to not last very long, for example to be resolved in the next Ubuntu development cycle, then a note in debian/changelog is sufficient.
 
 ## Version: Backport from upstream
 
