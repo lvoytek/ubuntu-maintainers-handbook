@@ -75,10 +75,7 @@ one architecture. Single-arch build failures tend to be more localised and more
 deterministic in their cause. Items towards the top of the page (but after all
 the "Test in progress" items) are newer, and so have a higher chance of being
 something simple that fewer people have looked at yet, without being so new that
-it's still being actively worked on by someone. If you want to double check
-whether someone is already looking at it, the
-[Ubuntu Devel Matrix channel](https://matrix.to/#/#devel:ubuntu.com) is a
-good place to ask.
+it's still being actively worked on by someone.
 
 For tasks like `+1 maintenance` where the goal is to ensure not too much
 migration backlog builds up it can be helpful to use [tools visualizing
@@ -86,6 +83,12 @@ the excuses page in different ways](https://discourse.ubuntu.com/t/visualizing-a
 Such tools can help to unblock a lot with only a few changes - but be careful,
 only using such will cause less central cases to get stuck for quite a long
 time.
+
+If you want to double check whether someone is already looking at it, the
+[Ubuntu Devel Matrix channel](https://matrix.to/#/#devel:ubuntu.com) is a
+good place to ask. For any case that requires more effort or a deeper analysis
+an [`update-excuse` bug](#bug-reports-for-migration-problems) will help to
+coordinate.
 
 On the other hand, all these are good hints but you don't have to worry too much
 about where to start; the Update Excuses page is like a wool sweater in that
