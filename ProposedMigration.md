@@ -76,7 +76,8 @@ deterministic in their cause. Items towards the top of the page (but after all
 the "Test in progress" items) are newer, and so have a higher chance of being
 something simple that fewer people have looked at yet, without being so new that
 it's still being actively worked on by someone. If you want to double check
-whether someone is already looking at it, the `#ubuntu-devel` IRC channel is a
+whether someone is already looking at it, the
+[Ubuntu Devel Matrix channel](https://matrix.to/#/#devel:ubuntu.com) is a
 good place to ask.
 
 Don't worry too much about where to start; the Update Excuses page is like a
