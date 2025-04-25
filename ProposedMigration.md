@@ -80,9 +80,16 @@ whether someone is already looking at it, the
 [Ubuntu Devel Matrix channel](https://matrix.to/#/#devel:ubuntu.com) is a
 good place to ask.
 
-Don't worry too much about where to start; the Update Excuses page is like a
-wool sweater in that whichever thread you start pulling, you'll end up
-unravelling the whole affair.
+For tasks like `+1 maintenance` where the goal is to ensure not too much
+migration backlog builds up it can be helpful to use [tools visualizing
+the excuses page in different ways](https://discourse.ubuntu.com/t/visualizing-and-exploring-ubuntu-excuses/59824).
+Such tools can help to unblock a lot with only a few changes - but be careful,
+only using such will cause less central cases to get stuck for quite a long
+time.
+
+On the other hand, all these are good hints but you don't have to worry too much
+about where to start; the Update Excuses page is like a wool sweater in that
+whichever thread you start pulling, you'll end up unravelling the whole affair.
 
 ## Bug reports for migration problems
 
