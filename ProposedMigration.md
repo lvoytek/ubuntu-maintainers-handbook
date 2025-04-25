@@ -90,9 +90,10 @@ good place to ask. For any case that requires more effort or a deeper analysis
 an [`update-excuse` bug](#bug-reports-for-migration-problems) will help to
 coordinate.
 
-On the other hand, all these are good hints but you don't have to worry too much
-about where to start; the Update Excuses page is like a wool sweater in that
-whichever thread you start pulling, you'll end up unravelling the whole affair.
+On the other hand, all these are good hints but you don't have to worry or feel
+blocked too much about where to start; the Update Excuses page is like a wool
+sweater in that whichever thread you start pulling, you'll end up unravelling
+the whole affair.
 
 ## Bug reports for migration problems
 
