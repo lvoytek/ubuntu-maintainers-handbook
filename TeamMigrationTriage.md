@@ -38,7 +38,7 @@ of such and work on a re-run.
 
 We'd not expect the triager to have a deeper look. If something looks really odd
 and seems it needs a deeper look, bring it up at the next post standup discussion.
-Chances are high thta someone will recognize an ongoing effect of uploads or
+Chances are high that someone will recognize an ongoing effect of uploads or
 infrastructure.
 
 Only if that does not resolve it we will create a proper bug for it, tag it
