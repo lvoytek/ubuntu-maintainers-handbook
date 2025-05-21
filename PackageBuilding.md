@@ -246,7 +246,7 @@ inbox.
 
 ## Build binary packages locally with `sbuild`
 
-Assuming you [have configured `sbuild` properly](Setup-md#sbuild),
+Assuming you [have configured `sbuild` properly](Setup.md#sbuild),
 you can use it to build the binary package. Usually you'd want to specify
 the following arguments:
 
