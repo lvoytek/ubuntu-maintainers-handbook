@@ -243,7 +243,7 @@ $purge_build_deps = 'successful';
 $build_dir = '/home/my_user/schroot/build';
 
 # Directory for writing build logs to
-$log_dir = "/home/my_user/schroot/logs";
+$log_dir = '/home/my_user/schroot/logs';
 
 # don't remove this, Perl needs it:
 1;
