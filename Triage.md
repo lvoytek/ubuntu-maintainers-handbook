@@ -18,6 +18,7 @@ This rotation covers all three aspects:
 - [Bug Triage](BugTriage.md)
 - [Documentation Triage](DocTriage.md)
 - [Forum Triage](ForumTriage.md)
+- [Team migration Triage](TeamMigrationTriage.md)
 
 ### Can a triage be skipped?
 
