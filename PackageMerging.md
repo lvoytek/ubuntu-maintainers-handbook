@@ -211,8 +211,8 @@ git ubuntu clone <package> [<package>-gu]
 
 Example:
 
-```bash
-$ git ubuntu clone at at-gu
+```bash <!-- prompt: $ -->
+git ubuntu clone at at-gu
 ```
 
 It's a good idea to append some `git-ubuntu` specific label (like `-gu`) to
